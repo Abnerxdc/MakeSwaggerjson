@@ -1,0 +1,87 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API 描述",
+    "version": "1.0",
+    "title": "Spring Boot 测试使用 Swagger2 构建RESTful API",
+    "contact": {
+      "name": "徐大成"
+    }
+  },
+  "host": "localhost:8082",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "pet",
+      "description": "Greeting Controller"
+    }
+  ],
+  "paths": {
+    "/test/getTaskList": {
+      "post": {
+        "tags": [
+          "pet"
+        ],
+        "summary": "postObj",
+        "operationId": "postObjUsingPOST",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "*/*"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "info",
+            "description": "info",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/oo"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/oo"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "oo": {
+      "describe": " ",
+      "type": "object",
+      "properties": {
+        "kaka": {
+          "type": "array",
+          "$ref": "#/definitions/kaka_temp_1"
+        }
+      }
+    },
+    "kaka_temp_1": {
+      "describe": " ",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["1234", "id"]
+      }
+    }
+  }
+}

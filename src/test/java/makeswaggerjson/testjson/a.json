@@ -1,0 +1,44 @@
+{
+  "startKey_temp_1": {
+    "describe": " ",
+    "type": "object",
+    "properties": {
+      "kaka": {
+        "$ref": "#/definitions/kaka_temp_1"
+      }
+    }
+  },
+  "kaka_temp_2": {
+    "describe": " ",
+    "type": "object",
+    "properties": {
+      "name": {
+        "describe": " ",
+        "type": "string",
+        "example": "abner"
+      },
+      "id": {
+        "format": "int64",
+        "describe": " ",
+        "type": "integer",
+        "example": 24
+      }
+    }
+  },
+  "kaka_temp_1": {
+    "describe": " ",
+    "type": "object",
+    "properties": {
+      "kaka": {
+        "$ref": "#/definitions/kaka_temp_2"
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
